@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="inside-container">
+    <h4 class="title newtask">New Task</h4>
+    <app-task *ngFor="let newData of newDatas" [data]="newData"></app-task>
+  </div>
+  <div class="inside-container">
+    <h4 class="title inprog">In Progress</h4>
+    <app-task
+      *ngFor="let inProgressData of inProgressDatas"
+      [data]="inProgressData"
+    ></app-task>
+  </div>
+  <div class="inside-container">
+    <h4 class="title done">Done</h4>
+    <app-task *ngFor="let doneData of doneDatas" [data]="doneData"></app-task>
+  </div>
+</div>
+<div *ngIf="showModal" class="custom-modal">
+  <div class="custom-modal-text">Task was updated</div>
+</div>

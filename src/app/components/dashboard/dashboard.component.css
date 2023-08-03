@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+.title {
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+}
+.newtask {
+  background-color: chartreuse;
+}
+.inprog {
+  background-color: green;
+}
+.done {
+  background-color: crimson;
+}
+.inside-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* .modalWindow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 70px;
+  position: absolute;
+  border: 3px solid black;
+  border-radius: 10px;
+  top: 100px;
+  right: 0px;
+} */
+
+.custom-modal {
+  position: fixed;
+  top: 12%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.custom-modal-text {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

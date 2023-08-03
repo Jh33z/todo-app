@@ -1,0 +1,31 @@
+<app-header></app-header>
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="formDiv">
+    <div class="inputs">
+      <label>Title</label>
+      <input
+        type="text"
+        placeholder="Title"
+        [formControl]="reactiveForm.controls.title"
+      />
+      <label>Subtitle</label>
+      <input
+        type="text"
+        placeholder="Subtitle"
+        [formControl]="reactiveForm.controls.subtitle"
+      />
+    </div>
+    <div class="textareaDiv">
+      <label>Description</label>
+      <textarea
+        class="textarea"
+        placeholder="Description"
+        [formControl]="reactiveForm.controls.description"
+      ></textarea>
+    </div>
+    <button class="btn" type="submit" [disabled]="!reactiveForm.valid">
+      Save
+    </button>
+  </div>
+</form>
+<app-dashboard></app-dashboard>

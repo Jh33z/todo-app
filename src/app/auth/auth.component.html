@@ -1,0 +1,24 @@
+<div class="main-div">
+
+  <div *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <form  #form="ngForm" (ngSubmit)="onSubmit(form)" *ngIf="!isLoading">
+    <div class="outer-div">
+        <h3>{{isLoginMode ? 'Enjoy your Todo List' : 'Make a new account'}}</h3>
+      <div class="inner-div">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" ngModel required email/>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel required minlength="6"/>
+      </div>
+      <div class="error" *ngIf="error">
+        <p>{{error}}</p>
+      </div>
+      <div class="btn-div">
+        <button type="submit" class="login-btn" [disabled]="!form.valid">{{isLoginMode? 'Login' : 'Create new account'}}</button>
+      </div>
+      <button class="create-btn" type="button" (click)="onSwitchMode()" *ngIf="isLoginMode">Create new account</button>
+    </div>
+  </form>
+</div>

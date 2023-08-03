@@ -1,0 +1,11 @@
+.activity-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

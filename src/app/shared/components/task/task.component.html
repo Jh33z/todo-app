@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="single-detail">
+    <div class="text">
+      <h4>{{ data.title }}</h4>
+      <p>{{ data.subtitle }}</p>
+      <p>{{ data.description }}</p>
+    </div>
+    <div class="buttons">
+      <button
+        class="btn"
+        type="button"
+        (click)="onNewClick(data.id, data.status)"
+      >
+        New
+      </button>
+      <button
+        class="btn"
+        type="button"
+        (click)="onProgressClick(data.id, data.status)"
+      >
+        Progress
+      </button>
+      <button
+        class="btn"
+        type="button"
+        (click)="onDoneClick(data.id, data.status)"
+      >
+        Done
+      </button>
+    </div>
+  </div>
+  <button class="close-button" (click)="onDeleteTask(data?.id, data.status)">
+    &times;
+  </button>
+</div>

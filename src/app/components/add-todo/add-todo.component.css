@@ -1,0 +1,46 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 200px;
+  justify-content: center;
+}
+input {
+  padding: 5px;
+}
+label {
+  font-weight: 600;
+}
+.textareaDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.textarea {
+  width: 250px;
+  height: 200px;
+  padding: 5px;
+}
+.formDiv {
+  display: flex;
+  gap: 80px;
+}
+.btn {
+  height: 40px;
+  width: 60px;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  cursor: pointer;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
